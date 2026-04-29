@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trần Nguyễn Anh Tài | Portfolio</title>
+  <meta name="description" content="Portfolio cá nhân của Trần Nguyễn Anh Tài - Sinh viên CNTT HCMUE, AI Engineer & Fullstack Developer">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1e293b, #2563eb);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      border: 4px solid white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header h2 {
+      font-size: 1.4rem;
+      color: #dbeafe;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      max-width: 800px;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .btn-group a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #2563eb;
+    }
+
+    .btn-primary:hover {
+      background: #dbeafe;
+    }
+
+    .btn-secondary {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-weight: 600;
+      color: #cbd5e1;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    /* Section */
+    section {
+      padding: 70px 10%;
+    }
+
+    h3.section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #60a5fa;
+      text-align: center;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .skill {
+      background: #2563eb;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 14px;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-card h4 {
+      color: #93c5fd;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    /* Timeline */
+    .timeline-item {
+      margin-bottom: 25px;
+      padding-left: 15px;
+      border-left: 3px solid #2563eb;
+    }
+
+    .timeline-item h4 {
+      color: #93c5fd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header h2 {
+        font-size: 1.1rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header id="home">
+    <div class="profile-img">T</div>
+    <h1>Trần Nguyễn Anh Tài</h1>
+    <h2>AI Engineer | Fullstack Developer | HCMUE Student</h2>
+    <p>
+      Sinh viên Công nghệ Thông tin tại Đại học Sư phạm TP.HCM với định hướng chuyên sâu về 
+      Artificial Intelligence, Machine Learning, Computer Vision và phát triển phần mềm hiện đại.
+    </p>
+    <div class="btn-group">
+      <a href="#projects" class="btn-primary">Xem dự án</a>
+      <a href="#contact" class="btn-secondary">Liên hệ</a>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="#about">Giới thiệu</a>
+    <a href="#education">Học vấn</a>
+    <a href="#skills">Kỹ năng</a>
+    <a href="#certificates">Chứng chỉ</a>
+    <a href="#projects">Dự án</a>
+    <a href="#experience">Kinh nghiệm</a>
+    <a href="#contact">Liên hệ</a>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
+    <h3 class="section-title">Giới thiệu</h3>
+    <div class="card">
+      <p>
+        Tôi là sinh viên năm 3 chuyên ngành Công nghệ thông tin tại HCMUE với niềm đam mê
+        sâu sắc trong lĩnh vực Trí tuệ nhân tạo (AI) và Phát triển phần mềm. 
+        Tôi có nền tảng vững chắc về Machine Learning (CNN, LSTM, Computer Vision) 
+        và kinh nghiệm trong việc xây dựng hệ thống Web hiện đại (ASP.NET Core, React.js, Laravel). 
+        Mục tiêu của tôi là ứng dụng các mô hình học máy tiên tiến để giải quyết các bài toán thực tế, 
+        đồng thời không ngừng nâng cao kỹ năng sử dụng và nghiên cứu các mô hình LLM để có thể bắt kịp xu thế, 
+        đóng góp giá trị cho các dự án công nghệ trong tương lai.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h3 class="section-title">Học vấn</h3>
+    <div class="timeline-item">
+      <h4>Đại học Sư phạm TP.HCM (2023 - Nay)</h4>
+      <p>Sinh viên năm 3 chuyên ngành Công nghệ Thông tin | GPA: 3.1 (Khá)</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h3 class="section-title">Kỹ năng</h3>
+    <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">C++/C#</div>
+        <div class="skill">PHP</div>
+        <div class="skill">Frontend Developing</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">React.js</div>
+        <div class="skill">ASP.NET Core</div>
+        <div class="skill">Laravel</div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates">
+    <h3 class="section-title">Chứng chỉ</h3>
+    <div class="card">
+      <ul>
+        <li>2025: IELTS 7.0</li>
+        <li>2026: Gemini Educator & Gemini Student (Google)</li>
+        <li>2026: Build Real World AI Applications with Gemini & Imagen</li>
+        <li>2026: Google Workspace Tools</li>
+        <li>2026: Rapid Developer Certification (Mendix)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h3 class="section-title">Dự án tiêu biểu</h3>
+    <div class="projects">
+      <div class="project-card">
+        <h4>Food Recognition System (2025 - 2026)</h4>
+        <p>
+            Xây dựng và huấn luyện mô hình CNN để nhận diện và phân loại các loại thực phẩm từ hình ảnh.
+             Áp dụng cơ chế Attention (CBAM) và trực quan hóa vùng đặc trưng bằng Grad-CAM để tăng độ chính
+              xác và tính minh bạch của mô hình. Triển khai mô hình trên ứng dụng bằng ngôn ngữ Python,
+               hỗ trợ nhận diện qua hình ảnh lẫn camera thời gian thực.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h4>AI Movie Recommender (2026)</h4>
+        <p>
+          Phát triển hệ thống gợi ý phim thông minh tích hợp khả năng xử lý ngôn ngữ tự nhiên
+           của mô hình LLM sử dụng API của Google Gemini. Xây dựng giao diện Web tương tác đơn giản và 
+           hệ thống API xử lý truy vấn và gợi ý nội dung dựa trên yêu cầu của người dùng thông qua chatbot, 
+           sử dụng kỹ thuật RAG cho phép mô hình truy xuất cơ sở dữ liệu.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h3 class="section-title">Kinh nghiệm</h3>
+    <div class="timeline-item">
+      <h4>GS25 - Nhân viên bán thời gian (02/2024 - 04/2024)</h4>
+      <p>Phát triển kỹ năng giao tiếp, vận hành và xử lý tình huống thực tế.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h4>Trải nghiệm 1 ngày làm nhân viên giao hàng (03/2026)</h4>
+      <p>Mục đích thu thập dữ liệu thực tế phục vụ nghiên cứu.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h3 class="section-title">Liên hệ</h3>
+    <div class="card">
+      <p><strong>Email:</strong> tnanhtai2005@gmail.com</p>
+      <p><strong>Điện thoại:</strong> 0981454308</p>
+      <p><strong>Địa chỉ:</strong> Căn hộ B1.16.10, Chung cư EraTown, khu phố 41, phường Tân Mỹ, Tp. Hồ Chí Minh</p>
+      <p><strong>GitHub:</strong> https://github.com/Witzidious</p>
+      <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/trần-nguyễn-anh-tài-a68445405/</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Trần Nguyễn Anh Tài | Portfolio</p>
+  </footer>
+
+</body>
+</html>
